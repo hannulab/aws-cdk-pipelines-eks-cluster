@@ -77,7 +77,7 @@ export class EksPipelineStack extends cdk.Stack {
       ],
     });
 
-    const prodEnv = clusterANameSuffix;
+    const prodEnv = clusterBNameSuffix;
 
     const appDnsStage = new AppDnsStage(this, "UpdateDNS", {
       envName: prodEnv,
