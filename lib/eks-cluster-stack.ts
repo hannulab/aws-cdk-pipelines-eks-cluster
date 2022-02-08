@@ -24,8 +24,8 @@ export class EksClusterStack extends cdk.Stack {
 
     const vpc = new ec2.Vpc(this, "Vpc", { maxAzs: 3 });
 
-    const cluster = new eks.Cluster(this, `acme-${props.nameSuffix}`, {
-      clusterName: `acme-${props.nameSuffix}`,
+    const cluster = new eks.Cluster(this, `EKS-${props.nameSuffix}`, {
+      clusterName: `EKS-${props.nameSuffix}`,
       version: props.clusterVersion,
       defaultCapacity: 0,
       vpc,
